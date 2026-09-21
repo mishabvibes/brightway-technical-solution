@@ -7,16 +7,21 @@ import { usePathname } from "next/navigation";
 import { MessageCircle, Menu, Phone, X, Download } from "lucide-react";
 import { business, mainNav, telHref, whatsappHref } from "@/lib/site";
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+}
+
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
   // Capture the PWA install prompt event
   useEffect(() => {
     const onPrompt = (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
     };
     window.addEventListener("beforeinstallprompt", onPrompt);
     return () => window.removeEventListener("beforeinstallprompt", onPrompt);
