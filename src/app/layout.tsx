@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import InstallPrompt from "@/components/InstallPrompt";
 import JsonLd from "@/components/JsonLd";
 import PwaRegister from "@/components/PwaRegister";
-import { baseOpenGraph, OG_IMAGE } from "@/lib/metadata";
+import { baseOpenGraph } from "@/lib/metadata";
 import { businessSchema, websiteSchema } from "@/lib/schema";
 import { SITE_URL, business } from "@/lib/site";
 import "./globals.css";
@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: [OG_IMAGE.url],
   },
   appleWebApp: { capable: true, title: business.shortName, statusBarStyle: "black-translucent" },
 };
