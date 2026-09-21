@@ -1,0 +1,34 @@
+{
+  "name": "brightway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BrightWay Technical Solutions: electrical and plumbing services in Mannarkkad, Kerala.",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "^0.487.0",
+    "next": "^15.5.25",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15.5.25",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
