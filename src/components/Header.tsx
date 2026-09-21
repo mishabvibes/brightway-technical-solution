@@ -4,12 +4,30 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Menu, Phone, X } from "lucide-react";
+import { MessageCircle, Menu, Phone, X, Download } from "lucide-react";
 import { business, mainNav, telHref, whatsappHref } from "@/lib/site";
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+
+  // Capture the PWA install prompt event
+  useEffect(() => {
+    const onPrompt = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener("beforeinstallprompt", onPrompt);
+    return () => window.removeEventListener("beforeinstallprompt", onPrompt);
+  }, []);
+
+  const handleInstall = async () => {
+    if (!deferredPrompt) return;
+    await deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") setDeferredPrompt(null);
+  };
 
   // Close the menu on navigation
   useEffect(() => {
@@ -113,6 +131,12 @@ export default function Header() {
               <MessageCircle size={20} aria-hidden="true" />
               Message on WhatsApp
             </a>
+            {deferredPrompt && (
+              <button type="button" onClick={handleInstall} className="btn btn-ink btn-large mt-2">
+                <Download size={20} aria-hidden="true" />
+                Install App
+              </button>
+            )}
           </div>
           <p className="mt-6 text-[#c9ced8]">Emergency callouts: {business.emergencyHours}.</p>
         </div>
