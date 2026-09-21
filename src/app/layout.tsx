@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   applicationName: business.shortName,
   category: "home services",
   alternates: { canonical: "/" },
+  verification: {
+    google: "FfzVsyaS2M5ojeVmNI3qwKlkP6yqjM7mHMN9lL-_twA",
+  },
   robots: {
     index: true,
     follow: true,
