@@ -98,8 +98,17 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="wrap flex flex-col justify-between gap-2 py-6 text-sm text-[#b4bac6] sm:flex-row">
-          <p>&copy; {year} {business.name}. All rights reserved.</p>
+        <div className="wrap flex flex-col justify-between gap-4 py-6 text-sm text-[#b4bac6] sm:flex-row sm:items-center sm:gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+            <p>&copy; {year} {business.name}. All rights reserved.</p>
+            <p className="hidden sm:block">&bull;</p>
+            <p>
+              Developed by{" "}
+              <a href="https://eclyze-website.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline">
+                Eclyze
+              </a>
+            </p>
+          </div>
           <p>
             <a href="/sitemap.xml" className="inline-flex min-h-11 items-center hover:text-white hover:underline">
               Sitemap
