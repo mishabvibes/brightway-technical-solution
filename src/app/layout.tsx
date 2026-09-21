@@ -33,7 +33,7 @@ const geist = localFont({
 
 const DEFAULT_TITLE = "Electrician & Plumber in Mannarkkad, Kerala | BrightWay";
 const DEFAULT_DESCRIPTION =
-  "BrightWay Technical Solutions: electrical, plumbing, maintenance and smart home services in Mannarkkad, Kerala. Free quotes and 24/7 emergency callouts.";
+  "BrightWay Technical Solutions: electrical, plumbing, maintenance, smart home, and security system installation services in Mannarkkad, Kerala. Free quotes and 24/7 emergency callouts.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

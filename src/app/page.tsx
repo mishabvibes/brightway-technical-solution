@@ -76,7 +76,7 @@ export default function HomePage() {
               Electrician and plumber in Mannarkkad, Kerala
             </h1>
             <p className="mt-6 max-w-[46ch] text-lead text-muted">
-              Wiring, repairs, leak detection and smart home upgrades for homes, offices and resorts.
+              Wiring, repairs, leak detection, smart home upgrades, and security system installation for homes, offices and resorts.
               Tell us what is wrong and we will send the right technician.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -148,8 +148,7 @@ export default function HomePage() {
               Electrical and plumbing, handled by one team
             </h2>
             <p className="mt-5 max-w-[46ch] text-lead text-muted">
-              A tripping breaker, a leaking pipe or a smart home upgrade: one call gets you the right
-              specialist, and every job starts with a free quote.
+              A tripping breaker, a leaking pipe, a smart home upgrade, or a CCTV camera installation: one call gets you the right specialist, and every job starts with a free quote.
             </p>
             <div className="mt-7">
               <Link href="/services" className="btn btn-ink">
@@ -252,7 +251,7 @@ export default function HomePage() {
             path: "/",
             name: "Electrician & Plumber in Mannarkkad, Kerala | BrightWay",
             description:
-              "BrightWay Technical Solutions: electrical, plumbing, maintenance and smart home services in Mannarkkad, Kerala. Free quotes and 24/7 emergency callouts.",
+              "BrightWay Technical Solutions: electrical, plumbing, maintenance, smart home, and security system installation services in Mannarkkad, Kerala. Free quotes and 24/7 emergency callouts.",
           }),
           faqSchema(homeFaqs),
         ]}

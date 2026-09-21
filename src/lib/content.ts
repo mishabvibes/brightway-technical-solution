@@ -292,9 +292,50 @@ export const services: Service[] = [
         a: "Yes. We connect both electrical and plumbing systems, for example leak detection alongside power monitoring.",
       },
     ],
-    related: ["electrical-services", "plumbing-services", "preventive-maintenance"],
+    related: ["electrical-services", "plumbing-services", "security-system-installation"],
     testimonialId: "afsal",
     formValue: "smarthome",
+  },
+  {
+    slug: "security-system-installation",
+    name: "Security system installation",
+    h1: "CCTV and security system installation in Mannarkkad",
+    metaTitle: "CCTV & Security Camera Installation in Mannarkkad",
+    metaDescription:
+      "Expert CCTV camera installation, surveillance systems and access control in Mannarkkad, Palakkad and across Kerala. Call +91 91881 26866.",
+    trade: "electrical",
+    summary:
+      "Comprehensive CCTV camera setup, surveillance networks, and access control for homes and businesses.",
+    intro:
+      "Protect your property with BrightWay's professional security system installation. We install, upgrade, and maintain CCTV cameras, surveillance networks, and access control systems for homes, offices, and commercial spaces across Mannarkkad, Palakkad, and Kerala.",
+    included: [
+      "CCTV camera installation and setup",
+      "Full surveillance system networking",
+      "Access control systems (biometric & card readers)",
+      "Ongoing security system maintenance",
+    ],
+    callWhen: [
+      "You want to monitor your home or business remotely from your phone",
+      "You need to restrict access to certain areas of your property",
+      "Your existing security cameras have blind spots or are failing",
+      "You are setting up a new office or resort and need full surveillance",
+    ],
+    faqs: [
+      {
+        q: "Do you install both indoor and outdoor CCTV cameras?",
+        a: "Yes. We install weather-resistant outdoor cameras as well as discreet indoor surveillance systems.",
+      },
+      {
+        q: "Can I view the security cameras on my phone?",
+        a: "Absolutely. We configure the surveillance systems so you can monitor your property live from your mobile device.",
+      },
+      {
+        q: "Do you offer security system maintenance?",
+        a: "Yes. We provide ongoing maintenance for CCTV and access control systems to ensure they run flawlessly 24/7.",
+      },
+    ],
+    related: ["smart-home-integration", "electrical-services", "preventive-maintenance"],
+    formValue: "security",
   },
 ];
 
