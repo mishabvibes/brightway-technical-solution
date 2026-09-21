@@ -4,10 +4,11 @@
  * so name, address and phone (NAP) can never drift between them.
  */
 
-/** Set NEXT_PUBLIC_SITE_URL to your real domain in production (no trailing slash). */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://brightwaysolutions.vercel.app"
-).replace(/\/+$/, "");
+let _siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || "https://brightway-tech.vercel.app";
+if (!_siteUrl.startsWith("http")) {
+  _siteUrl = `https://${_siteUrl}`;
+}
+export const SITE_URL = _siteUrl.replace(/\/+$/, "");
 
 export const business = {
   name: "BrightWay Technical Solutions",
