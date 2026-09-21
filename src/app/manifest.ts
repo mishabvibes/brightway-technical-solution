@@ -3,13 +3,11 @@ import { business } from "@/lib/site";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    id: "/",
     name: business.name,
     short_name: business.shortName,
     description:
       "Electrical and plumbing services in Mannarkkad, Kerala. Free quotes and 24/7 emergency callouts.",
-    start_url: "/?source=pwa",
-    scope: "/",
+    start_url: "/",
     display: "standalone",
     lang: "en-IN",
     background_color: "#000000",
