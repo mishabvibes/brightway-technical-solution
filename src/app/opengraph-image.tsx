@@ -1,6 +1,4 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { business } from "@/lib/site";
 
 export const alt = "BrightWay Technical Solutions - Electrical and plumbing services in Mannarkkad, Kerala.";
@@ -12,8 +10,10 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
-  // Read the local font file for Ronzino Bold
-  const fontData = await readFile(join(process.cwd(), "src/fonts/Ronzino-Bold.otf"));
+  // Use fetch with import.meta.url so Vercel can trace and bundle the local font file
+  const fontData = await fetch(
+    new URL("./Ronzino-Bold.otf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
