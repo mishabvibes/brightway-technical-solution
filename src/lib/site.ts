@@ -4,7 +4,13 @@
  * so name, address and phone (NAP) can never drift between them.
  */
 
-let _siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || "https://brightway-tech.vercel.app";
+// Always use the primary production URL to ensure Open Graph images resolve correctly for WhatsApp/socials.
+// Vercel's temporary deployment URLs (VERCEL_URL) often return HTML instead of the image when scraped.
+let _siteUrl = 
+  process.env.NEXT_PUBLIC_SITE_URL || 
+  process.env.VERCEL_PROJECT_PRODUCTION_URL || 
+  "https://brightwaysolutions.vercel.app";
+
 if (!_siteUrl.startsWith("http")) {
   _siteUrl = `https://${_siteUrl}`;
 }
