@@ -50,17 +50,20 @@ export default async function Image() {
             <span style={{ fontSize: "48px", color: "#047857" }}>{business.shortName}</span>
           </div>
           
-          <h1
+          <div
             style={{
-              fontSize: "84px",
+              display: "flex",
+              flexDirection: "column",
+              fontSize: "76px",
               lineHeight: 1.1,
               marginTop: "40px",
-              maxWidth: "900px",
               letterSpacing: "-0.02em",
+              fontWeight: 700,
             }}
           >
-            Premium Electrical &<br />Plumbing Solutions
-          </h1>
+            <span style={{ display: "block" }}>Premium Electrical &</span>
+            <span style={{ display: "block" }}>Plumbing Solutions</span>
+          </div>
           
           <p
             style={{
@@ -81,7 +84,7 @@ export default async function Image() {
             <span>{business.phone.display}</span>
           </div>
           <div style={{ fontSize: "32px", color: "#a0aabf" }}>
-            brightwaytech.vercel.app
+            brightwaysolutions.vercel.app
           </div>
         </div>
       </div>
