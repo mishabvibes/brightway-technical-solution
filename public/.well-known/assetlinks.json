@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.brightwaysolutions.twa",
+        "sha256_cert_fingerprints": ["3C:AA:68:C7:AA:38:A6:CC:7F:60:C4:0C:11:22:73:A6:DE:8E:14:A8:F8:BA:2B:DD:10:82:6C:F2:26:0C:B5:D9"]
+      }
+    }]
